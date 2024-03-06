@@ -14,7 +14,7 @@ export class PaymentService  {
 
 
   checkOut(id:string|null,payInfo:object) :Observable<any> {
-  return  this._http.post(this.baseUrl+`orders/checkout-session/${id}?url=http://localhost:4200`,
+  return  this._http.post(this.baseUrl+`orders/checkout-session/${id}?url=https://ecommerce-red-store.vercel.app/`,
     {shippingAddress:payInfo},
     {headers:this.token}) 
   }
